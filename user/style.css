@@ -1,0 +1,279 @@
+/*initialize start*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 30px 0 0 0;
+  font-size: 1.7rem;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  background-color: #39393a; 
+}
+a {
+  text-decoration: none;
+}
+
+/*initialize end*/
+/*form section start */
+
+section {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+section .form-container {
+  text-align: center;
+}
+section .form-container .form-inner {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  height: 480px;
+  border-radius: 3px;
+  background-color: #50514f;
+  box-shadow: 3px 4px .5px #70716f;
+  overflow: hidden;
+}
+  /*sign-in sign-up information start*/
+
+.info {
+  text-align: left;
+  margin-top: 10px;
+}
+.info li {
+  display: inline-block;
+  padding-left: 5px;
+  width: 70px;
+  cursor: pointer;
+}
+.sign-in{
+  margin-left:10%;
+  margin-right:0px;
+  padding:0;
+  color: #DCDCDD;
+  transition: color 0.5s ease;
+}
+.sign-up {
+  margin-right: 0px;
+  color: #DCDCDD;
+  transition: color 0.5s ease;
+}
+
+.sign-in.active{
+  color: #9966ff;
+}
+.sign-up.active{
+  color: #9966ff;
+}
+.info-state{
+  position: absolute;
+  display: block;
+  content:"";
+  width:45px;
+  height:3px;
+  top: 0px;
+  left:38px;
+  background-color:#9966ff;
+  transition: all 0.2s cubic-bezier(.34,1.42,.7,1.07);
+}
+.info-state.right{
+  position: absolute;
+  display: block;
+  content:"";
+  width:45px;
+  height:3px;
+  top: 0px;
+  left:117px;
+  background-color:#9966ff;
+  transition: all 0.2s cubic-bezier(.34,1.42,.7,1.07);
+}
+.info li:hover {
+  color: #9966ff;
+  transition: color 0.5s ease;
+}
+
+  /*sign-in sign-up information end*/
+  /*photo style start*/
+
+.photo {
+  padding-top: 30px;
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.photo img {
+  width: 100px;
+  height: 100px;
+}
+.photo i{
+  font-size:100px;
+}
+  /*photo style end*/
+  /*form input style start*/
+
+.form-input{
+  width:200%;
+  transition: all .5s cubic-bezier(.34,1.42,.7,1.00) .25s;
+}
+.form-input.slide{
+  margin-left:-100%;
+}
+.form-input-inner{
+  display: inline-block;
+  width: 49%;
+}
+    /*form input button start*/
+
+.mention {
+  bottom: 0;
+  height: 90px;
+  width: 105%;
+  cursor: pointer;
+  position: absolute;
+  transition: all .3s ease;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius:5px;
+  background-color: #9966ff;
+
+  margin-left: -4px;
+}
+.mention:hover{
+  background-color: #a579ff;
+}
+.mention-info{
+  padding-top: 25px;
+  font-size: 25px;
+  color: #50514f;
+}
+
+    /*form input button end*/
+    /*input style start*/
+
+.sign-in-input {
+  padding-top: 40px;
+  width: 320px;
+  height: 200px;
+}
+.sign-up-input{
+  padding-top: 15px;
+  width: 320px;
+  height: 200px;
+}
+.input-contain {
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+.input-contain .warp {
+  position: relative;
+  margin-top: 10px;
+  height: 25%;
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+  transition: all .4s ease;
+}
+
+.input-contain input[type=text],input[type=password] {
+  border:none;
+  float: left;
+  margin-top: 10px;
+  width: 100%;
+  height: 80%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  color: #DCDCDD;
+  background-color: transparent;
+  border-bottom: 2px solid #A6A2A2;
+  letter-spacing: 1.5px;
+  outline: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.input-contain input[type=text]:focus,input[type=password]:focus{
+  border-bottom: 2px solid #9966ff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.sign-up-input .input-contain .warp{
+  height: 22%
+}
+input.sign-up-placeholder::-webkit-input-placeholder {
+color: #6D6E6B !important;
+}
+
+input.sign-up-placeholder:-moz-placeholder { /* Firefox 18- */
+color: #6D6E6B !important;  
+}
+
+input.sign-up-placeholder::-moz-placeholder {  /* Firefox 19+ */
+color: #6D6E6B !important;  
+}
+
+input.sign-up-placeholder:-ms-input-placeholder {  
+color: #6D6E6B !important;  
+}
+
+    /*input type end*/
+  /*form input style start*/
+/*form section end*/
+@media(max-width: 768px){
+  section .form-container .form-inner {
+      width: 240px;
+      height: 360px;
+    }
+  .info-state{
+    left:30px;
+  }
+  .info-state.right{
+    left:108px;
+  }
+  .photo {
+    display:none;
+  }
+  .mention {
+    height: 70px;
+    margin-left: -4px;
+  }
+  .mention:hover{
+    background-color: #9966ff;
+  }
+  .mention-info{
+    padding-top: 20px;
+    font-size: 25px;
+    color: #50514f;
+  }
+  .sign-in-input {
+    padding-top: 40px;
+    width: 240px;
+    height: 200px;
+  }
+  .sign-up-input{
+    padding-top: 15px;
+    width: 240px;
+    height: 200px;
+  }
+  .input-contain {
+    width: 70%;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 3px;
+  }
+  .input-contain .warp {
+    position: relative;
+    margin-top: 10px;
+    height: 25%;
+    width: 100%;
+    z-index: 2;
+    background-color: transparent;
+    transition: all .4s ease;
+  }
+}

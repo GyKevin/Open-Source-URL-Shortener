@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form action="login.php" method="POST">
-        <input type="text" name="username"> <br>
-        <input type="password" name="password">
-        <input type="submit" name="enter" value="login">
+    <form id="field">
+        <center>
+        <input type="text" name="longurl" placeholder="Paste link here">
+        <br>
+        <input type="submit" value="SUBMIT">
+        </center>
     </form>
 </body>
 </html>
