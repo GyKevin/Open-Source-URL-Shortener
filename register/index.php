@@ -38,19 +38,21 @@
     <form class="field" action="login.php" method="post">
         <center>
           <div class="info">
-            <p class="sign-in">Sign In</p>
+            <p class="sign-in">Sign Up</p>
           </div>
         <div class="photo">
           <i class="fa fa-user 2x"></i>
         </div>
         <input type="text" name="username" autocomplete="off" placeholder="Username">
-        <input type="text" name="password" autocomplete="off" placeholder="Password">
+        <input type="text" name="email" autocomplete="off" placeholder="Email">
+        <input type="password" name="password" autocomplete="off" placeholder="Password">
+        <input type="password" name="password" autocomplete="off" placeholder="Confirm Password">
         <br>
-        <input type="submit" value="Sign In">
+        <input type="submit" value="Sign Up">
         <br>
         <br>
         <div>
-        <p class="no-acc">Don't have an account? <a class="create-acc" href="./../register">Create account</a></p>
+        <p class="no-acc">Already have an account? <a class="create-acc" href="./../sign-in">Sign In</a></p>
         </div>
         </center>
     </form>

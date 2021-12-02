@@ -77,7 +77,7 @@ body {
     width: 3.5rem;
     border: 0;
     aspect-ratio: 1;
-    top: 2rem;
+    top: 3rem;
     right: 1rem;
 
   }
@@ -168,6 +168,19 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color:#a579ff;
+}
+
+@media(max-width: 35em) {
+  #field {
+    top: 20vh;
+    width: 45vh;
+    height: 25vh
+  }
+
+  input[type=text] {
+    margin-top: 12%;
+    width: 30vh;
+  }
 }
 
 /*other*/

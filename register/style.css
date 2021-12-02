@@ -1,3 +1,4 @@
+/*general style*/
 * {
     margin: 0;
     padding: 0;
@@ -106,24 +107,82 @@
   a.active {
     color: #9966ff;
   }
-
+  
   /*url shortener field*/
-#field {
-    top: 15vh;
+  .field {
+    top: 10vh;
     z-index: 1;
     position: relative;
     margin: 0 auto;
     width: 45vh;
-    height: 60vh;
+    height: 70vh;
     border-radius: 3px;
     background-color: #50514f;
     box-shadow: 3px 4px .5px #70716f;
     overflow: hidden;
   }
   
+  @media(max-width: 35em) {
+    .field {
+      top: 0vh;
+      height: 78vh;
+    }
+  }
+  
+  .sign-in {
+    padding-top: 1vh;
+    text-decoration: none;
+    color: #9966ff;
+    border-top: 2px solid #9966ff;
+  }
+  
 
-  input[type="text"] {
-    margin-bottom: 8vh;
+
+  .create-acc {
+    color: #9966ff;
+    text-decoration: none;
+  }
+  
+  .create-acc:hover {
+    color: #a579ff;
+    border-bottom: 1px solid #a579ff;
+  }
+  
+  .no-acc {
+    font-size: 15px;
+  }
+  
+  .photo {
+    padding-top: 30px;
+    position: relative;
+    width: 100%;
+    height: 100px;
+  }
+  .photo img {
+    width: 100px;
+    height: 100px;
+  }
+  .photo i{
+    font-size:100px;
+  }
+
+  @media (max-width: 35em) {
+    .photo {
+      width: 60%;
+      height: 60%;
+    }
+    .photo img {
+      width: 60%;
+      height: 60%;
+    }
+
+    .photo i {
+      font-size: 60px;
+    }
+  }
+  
+  input[type="text"], [type="password"] {
+    margin-bottom: 3vh;
     width: 30vh;
     border: none;
     margin-top: 8%;
@@ -144,9 +203,13 @@
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  input[type=text]::placeholder {
-    text-align: center;
+
+  input[type=password]:focus{
+    border-bottom: 2px solid #9966ff;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
   }
+
   input:focus::placeholder {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
@@ -169,7 +232,7 @@
   input[type=submit]:hover {
     background-color:#a579ff;
   }
-  
+
   /*other*/
   .sr-only {
     visibility: hidden;
