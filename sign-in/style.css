@@ -31,6 +31,7 @@ section .form-container {
   text-align: center;
 }
 section .form-container .form-inner {
+  top: 10vh;
   position: relative;
   margin: 0 auto;
   width: 320px;

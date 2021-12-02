@@ -23,6 +23,7 @@ body {
 }
 
 .logo {
+  width: 35%;
   margin: 2rem;
 }
 
@@ -102,7 +103,9 @@ body {
 
 a:hover {
   color: #9966ff;
-  border-bottom: 2px solid #9966ff;
+}
+a.active {
+  color: #9966ff;
 }
 
 /*url shortener field*/

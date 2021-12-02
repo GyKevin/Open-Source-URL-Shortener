@@ -10,6 +10,7 @@
     <title>stuff</title>
 </head>
 <body>
+
 <section>
     <div class="form-container">
       <div class="form-inner">
@@ -63,7 +64,7 @@
             </div>
 
             <div class="mention">
-              <div class="mention-info">Register</div>
+              <div class="mention-info">REGISTER</div>
             </div>
           </div>  
 
