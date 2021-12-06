@@ -7,6 +7,17 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css?v=1">
     <script src="nav.js" defer></script>
+    <?php
+    $userID = null;
+    if (isset($_COOKIE['iduser'])) {
+        $userID = $_COOKIE["iduser"];
+    }
+    if (isset($_POST["logout"])) {
+        unset($_COOKIE['iduser']);
+        setcookie('iduser', null, -1, "/");
+        header("Location: index.php");
+    }
+    ?>
 </head>
 <body>
     <header class="primary-header flex">
@@ -21,15 +32,18 @@
                 <li class="active">
                     <a aria-hidden="true" class="active" href="index.php">Home</a>
                 </li>
-                <li>
-                    <a aria-hidden="true" href="#">Short Urls</a>
-                </li>
-                <li>
-                    <a aria-hidden="true" href="profile">Profile</a>
-                </li>
-                <li>
-                    <a aria-hidden="true" href="sign-in">Sign In</a>
-                </li>
+                <?php
+                    if ($userID !== NULL){
+                    echo "<li><a aria-hidden=\"true\" href=\"profile\">Profile</a></li>";
+                    echo "<li><a aria-hidden=\"true\" href=\"\">Short Urls</a></li>";
+                    }
+
+                    if ($userID !== NULL) {
+                        echo "<li><form action=\"index.php\" method=\"post\" id=\"logout\"><input type=\"hidden\" name=\"logout\" value=\"Index\"><a href=\"javascript:{}\" onclick=\"document.getElementById('logout').submit(); return false;\">Logout</a></form></li>";
+                    } else {
+                        echo "<li><a aria-hidden=\"true\" href=\"sign-in\">Sign In</a></li>";
+                    }
+                    ?>
             </ul>
         </nav>
     </header>

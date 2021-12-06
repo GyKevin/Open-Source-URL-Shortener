@@ -164,7 +164,7 @@ a.active {
   font-size:100px;
 }
 
-input[type="text"] {
+input[type="text"], [type="password"] {
   margin-bottom: 3vh;
   width: 30vh;
   border: none;
@@ -186,6 +186,13 @@ input[type=text]:focus{
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
+
+input[type=password]:focus{
+  border-bottom: 2px solid #9966ff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
 input:focus::placeholder {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;

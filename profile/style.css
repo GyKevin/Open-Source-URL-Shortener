@@ -114,16 +114,43 @@
     position: relative;
     margin: 0 auto;
     width: 45vh;
-    height: 60vh;
+    height: 50vh;
     border-radius: 3px;
     background-color: #50514f;
     box-shadow: 3px 4px .5px #70716f;
     overflow: hidden;
   }
+
+  @media(max-width: 35em) {
+    #field {
+      top: 10vh;
+      height: 55vh;
+    }
+  }
+
+  .sign-in {
+    padding-top: 1vh;
+    text-decoration: none;
+    color: #9966ff;
+    border-top: 2px solid #9966ff;
+  }
+
+  .create-acc {
+    color: #9966ff;
+    text-decoration: none;
+  }
   
+  .create-acc:hover {
+    color: #a579ff;
+    border-bottom: 1px solid #a579ff;
+  }
+  
+  .no-acc {
+    font-size: 15px;
+  }
 
   input[type="text"] {
-    margin-bottom: 8vh;
+    margin-bottom: 3vh;
     width: 30vh;
     border: none;
     margin-top: 8%;
