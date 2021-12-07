@@ -54,19 +54,26 @@
         </nav>
     </header>
 
-    <form id="field">
+    <form id="field" action="script.php" method="post" autocomplete="off">
         <center>
         <div class="info">
             <p class="sign-in">Profile</p>
         </div>
-        <?php echo "<input type=\"text\" name=\"userid\" placeholder='" . $row['userid'] . "' disabled>" ?>
-        <?php echo "<input type=\"text\" name=\"username\" placeholder='" . $row['username'] . "' disabled>" ?>
-        <?php echo "<input type=\"text\" name=\"email\" placeholder='" . $row['email'] . "' disabled>" ?>
+        <?php echo "<input type=\"text\" name=\"username\" placeholder='" . $row['username'] . "#".$row['userid']."' disabled required>" ?>
+        <?php echo "<input type=\"email\" id=\"new-mail\" name=\"email\" placeholder='" . $row['email'] . "'  required>" ?>
         <br>
-        <input type="submit" value="NEW EMAIL">
+        <input type="submit" id="new-button" value="SAVE">
         <br>
+        <?php
+        session_start();
+        if (isset($_SESSION['errors'])) {
+            $error_output = $_SESSION['errors'];
+            echo $error_output;
+            unset($_SESSION['errors']);
+        }
+        ?>
         <br>
-        <p class="no-acc">Forgot password? <a class="create-acc" href="./../register">Change password</a></p>
+        <p class="no-acc">Forgot password? <a class="create-acc" href="./pass">Change password</a></p>
         </center>
     </form>
 </body>
