@@ -48,11 +48,20 @@
         </nav>
     </header>
 
-    <form id="field">
+    <form id="field" action="url.php" method="post" autocomplete="off">
         <center>
         <input type="text" name="longurl" placeholder="Paste link here">
         <br>
         <input type="submit" value="SUBMIT">
+        <br>
+        <?php
+        session_start();
+        if(isset($_SESSION['errors'])){
+            $error_output = $_SESSION['errors'];
+            echo $error_output;
+            unset ($_SESSION['errors']);
+        }
+        ?>
         </center>
     </form>
 </body>
