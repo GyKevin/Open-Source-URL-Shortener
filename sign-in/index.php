@@ -47,7 +47,7 @@
                 <?php
                     if ($userID !== NULL){
                     echo "<li><a aria-hidden=\"true\" href=\"profile\">Profile</a></li>";
-                    echo "<li><a aria-hidden=\"true\" href=\"\">Short Urls</a></li>";
+                    echo "<li><a aria-hidden=\"true\" href=\"\">My Urls</a></li>";
                     }
 
                     if ($userID !== NULL) {

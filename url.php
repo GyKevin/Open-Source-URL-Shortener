@@ -20,6 +20,8 @@
 
     //variables
     $url = $_POST['longurl'];
+    //$baseurl = 'http://h1ren.xyz/r/?url=';
+    $baseurl = 'http://localhost/URL-Shortener/r/?url=';
 
     //random string generator
      function rand_string() {
@@ -34,6 +36,7 @@
         return $randstring;
     }
 
+
     //user error
     if(!filter_var($url, FILTER_VALIDATE_URL)) {
         $_SESSION['errors'] = 'Url is invalid.';
@@ -46,14 +49,19 @@
     }
 
     //insert into database
-    if(!isset($_SESSION['errors'])) {
+    if(!isset($_SESSION['errors']) || isset($userID)) {
         $short = rand_string();
-        $query = "INSERT INTO `url` (longurl, shorturl, user_userid) VALUES ('$url', '$short', '$userID')";
+        $query = "INSERT INTO `url` (longurl, shorturl, user_userid) VALUES ('$url', '$short', '$userID') ON DUPLICATE KEY UPDATE shorturl = '$short'";
         $dbc->query($query); 
+        
+        //get redirect
+        $_SESSION['link'] = $baseurl.$short;
+        header("Location: index.php");
+        } else {
+        $idreplace = 1111;
+        $query = "INSERT INTO `url` (longurl, shorturl, user_userid) VALUES ('$url', '$short', '$idreplace') ON DUPLICATE KEY UPDATE shorturl = '$short'";
+        $dbc->query($query);
+        $_SESSION['link'] = $baseurl.$short;
+        header("Location: index.php");
     }
-
-    //get redirect
-    
-
-
 ?>

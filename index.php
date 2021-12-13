@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css?v=1">
+    <script src="https://kit.fontawesome.com/d269b334d3.js" crossorigin="anonymous"></script>
     <script src="nav.js" defer></script>
     <?php
     $userID = null;
@@ -30,12 +31,12 @@
         <nav>
             <ul id="primary-navigator" data-visible="false" class="primary-navigation flex">
                 <li class="active">
-                    <a aria-hidden="true" class="active" href="index.php">Home</a>
+                    <a aria-hidden="true" class="active" href="">Home</a>
                 </li>
                 <?php
                     if ($userID !== NULL){
                     echo "<li><a aria-hidden=\"true\" href=\"profile\">Profile</a></li>";
-                    echo "<li><a aria-hidden=\"true\" href=\"\">Short Urls</a></li>";
+                    echo "<li><a aria-hidden=\"true\" href=\"my-urls\">My Urls</a></li>";
                     }
 
                     if ($userID !== NULL) {
@@ -52,7 +53,7 @@
         <center>
         <input type="text" name="longurl" placeholder="Paste link here">
         <br>
-        <input type="submit" value="SUBMIT">
+        <button type="submit">SHORTEN</button>
         <br>
         <?php
         session_start();
@@ -60,6 +61,12 @@
             $error_output = $_SESSION['errors'];
             echo $error_output;
             unset ($_SESSION['errors']);
+        }
+
+        if(isset($_SESSION['link'])) {
+            $linkoutput = $_SESSION['link'];
+            echo $linkoutput;
+            unset ($_SESSION['link']);
         }
         ?>
         </center>
