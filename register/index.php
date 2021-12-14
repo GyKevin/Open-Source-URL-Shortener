@@ -92,10 +92,10 @@
         <div class="photo">
           <i class="fa fa-user 2x"></i>
         </div>
-        <input type="text" name="username" autocomplete="off" placeholder="Username">
-        <input type="text" name="email" autocomplete="off" placeholder="Email">
-        <input type="password" id="password" name="password" autocomplete="off" placeholder="Password">
-        <input type="password" id="repass" name="repass" autocomplete="off" placeholder="Confirm Password">
+        <input type="text" name="username" autocomplete="off" placeholder="Username" required>
+        <input type="text" name="email" autocomplete="off" placeholder="Email" required>
+        <input type="password" id="password" name="password" autocomplete="off" placeholder="Password" required>
+        <input type="password" id="repass" name="repass" autocomplete="off" placeholder="Confirm Password" required>
         <br>
         <input type="submit" name="button" onclick="mySubmit(this)" value="Sign Up"></input>
         <br>

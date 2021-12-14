@@ -126,7 +126,7 @@
     z-index: 1;
     position: relative;
     margin: 0 auto;
-    width: 820px;
+    width: 620px;
     height: 100%;
     padding-bottom: 3vh;
     border-radius: 3px;
@@ -137,7 +137,7 @@
   
   button[type="submit"] {
   
-    width: 600px;
+    width: 400px;
     border: none;
     margin-top: 5%;
     font-family: 'Raleway', sans-serif;
@@ -167,7 +167,7 @@
     color: transparent;
   }
   
-  button[type=submit] {
+  /* button[type=submit] {
     margin-top: 2%;
     margin-right: 2%;
     font-family: 'Raleway', sans-serif;
@@ -179,11 +179,12 @@
     background-color: #9966ff;
     color: #50514f;
     cursor: pointer;
-  }
+  } */
 
   
   button[type=submit]:hover {
-    background-color:#a579ff;
+    color:#a579ff;
+    border-bottom: 2px solid #a579ff;
   }
 
 
@@ -207,8 +208,9 @@
     }
 
     button[type=submit] {
-        width:10vh;
+        width:85vw;
         margin: 1vh;
+        
     }
   }
   

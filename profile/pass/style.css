@@ -10,6 +10,11 @@
     background-color: #39393a; 
     overflow-x: hidden;
   }
+
+  .newpass {
+    text-align: center;
+    margin: 0 auto;
+  }
   
   .flex {
     display: flex;
@@ -99,12 +104,18 @@
       padding-inline: clamp(3rem, 10vw, 10rem);
     }
   }
+  a {
+    color: #9966ff;
+    text-decoration: none;
+    padding-left: 48%;
+  }
   
   a:hover {
-    color: #9966ff;
+    color: #a579ff;
+    text-decoration: underline;
   }
   a.active {
-    color: #9966ff;
+    color: #a579ff;
   }
 
   /*url shortener field*/

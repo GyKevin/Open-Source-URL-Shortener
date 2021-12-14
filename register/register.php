@@ -38,7 +38,7 @@ if(empty($username) || empty($email) || empty($password)) {
 
 //validation errors
 if($password !== $repass) {
-    $_SESSION['errors']="Passwords don't match ".$repass."/".$password; 
+    $_SESSION['errors']="Passwords don't match.";
     header("location: index.php");
 }
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -47,10 +47,6 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 if($dataEmail[0] >=1) {
     $_SESSION['errors']="An account with that email already exists.";
-    header("location: index.php");
-}
-if($dataUser[0] >=1) {
-    $_SESSION['errors']="An account with that username already exists.";
     header("location: index.php");
 }
 
